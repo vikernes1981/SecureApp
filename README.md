@@ -1,62 +1,78 @@
-Secure Full-Stack App 🛡️
+# Secure Full-Stack App 🕡
 
-A secure full-stack web application built with React, Node.js, and SQLite, designed to showcase modern security practices. This project serves as a foundation for developers to build secure and scalable applications.
-✨ Features
+A **secure full-stack web application** built with **React**, **Node.js**, and **SQLite**, designed to showcase modern security practices. This project serves as a foundation for developers to build secure and scalable applications.
 
-    Authentication: Access and refresh token-based authentication.
-    CSRF Protection: Ensures state-changing requests are legitimate.
-    Content Security Policy (CSP): Mitigates XSS by restricting resource loading.
-    Rate Limiting: Defends against brute force attacks on sensitive endpoints.
-    Secure Cookies: Configured with httpOnly, sameSite, and secure attributes.
-    Basic Frontend: React-based frontend for easy customization and learning.
+---
 
-🛠️ Tech Stack
-Frontend:
+## ✨ Features
 
-    React: Simple components for login, registration, and authentication checks.
-    Axios: Handles API requests with CSRF and token refresh.
+- **Authentication**: Access and refresh token-based authentication.
+- **CSRF Protection**: Ensures state-changing requests are legitimate.
+- **Content Security Policy (CSP)**: Mitigates XSS by restricting resource loading.
+- **Rate Limiting**: Defends against brute force attacks on sensitive endpoints.
+- **Secure Cookies**: Configured with `httpOnly`, `sameSite`, and `secure` attributes.
+- **Basic Frontend**: React-based frontend for easy customization and learning.
 
-Backend:
+---
 
-    Node.js + Express: RESTful API with security-focused middleware.
-    SQLite: Lightweight database for user authentication and session management.
-    Helmet: Adds secure HTTP headers, including CSP.
-    Csurf: Protects against CSRF attacks.
-    Bcrypt: Secure password hashing.
-    JSON Web Tokens (JWT): Manages access and refresh tokens.
+## 🔧️ Tech Stack
 
-🚀 Getting Started
-Prerequisites:
+### Frontend:
+- **React**: Simple components for login, registration, and authentication checks.
+- **Axios**: Handles API requests with CSRF and token refresh.
 
-    Node.js (v14 or higher)
-    npm (v7 or higher)
+### Backend:
+- **Node.js** + **Express**: RESTful API with security-focused middleware.
+- **SQLite**: Lightweight database for user authentication and session management.
+- **Helmet**: Adds secure HTTP headers, including CSP.
+- **Csurf**: Protects against CSRF attacks.
+- **Bcrypt**: Secure password hashing.
+- **JSON Web Tokens (JWT)**: Manages access and refresh tokens.
 
-Installation:
+---
 
-    Clone the repository:
+## 🚀 Getting Started
 
-git clone https://github.com/vikernes1981/SecureApp.git
-cd SecureApp
+### Prerequisites:
+- **Node.js** (v14 or higher)
+- **npm** (v7 or higher)
 
-Install dependencies:
+---
 
-npm install
+### Installation:
 
-Set up environment variables: Create a .env file in the root directory and configure the following:
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/vikernes1981/SecureApp.git
+   cd SecureApp
+   ```
 
-PORT=5000
-SECRET=your-secret-key
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-Run the app:
+3. **Set up environment variables**:
+   Create a `.env` file in the root directory and configure the following:
+   ```env
+   PORT=5000
+   SECRET=your-secret-key
+   ```
 
-    npm start
+4. **Run the app**:
+   ```bash
+   npm start
+   ```
 
-    Access the app:
-        Frontend: http://localhost:5173
-        Backend: http://localhost:5000
+5. **Access the app**:
+   - Frontend: `http://localhost:5173`
+   - Backend: `http://localhost:5000`
 
-📂 Folder Structure
+---
 
+## 📂 Folder Structure
+
+```
 SecureApp/
 ├── backend/
 │   ├── server.js        # Express server with authentication & security
@@ -69,51 +85,60 @@ SecureApp/
 ├── package.json         # Backend dependencies
 ├── README.md            # Project documentation
 └── .env                 # Environment variables
+```
 
-🛡️ Security Highlights
+---
 
-    Access and Refresh Tokens:
-        Short-lived access tokens for secure API calls.
-        Long-lived refresh tokens stored in HTTP-only cookies.
+## 🔡 Security Highlights
 
-    CSRF Protection:
-        CSRF tokens ensure state-changing requests are authenticated.
+1. **Access and Refresh Tokens**:
+   - Short-lived access tokens for secure API calls.
+   - Long-lived refresh tokens stored in HTTP-only cookies.
 
-    Content Security Policy (CSP):
-        Default policy: default-src 'none'; (customize as needed).
+2. **CSRF Protection**:
+   - CSRF tokens ensure state-changing requests are authenticated.
 
-    Rate Limiting:
-        Login: Max 5 attempts per 15 minutes.
-        Registration: Max 10 attempts per 15 minutes.
+3. **Content Security Policy (CSP)**:
+   - Default policy: `default-src 'none';` (customize as needed).
 
-    Secure Cookies:
-        httpOnly: Prevents client-side access.
-        sameSite: Protects against cross-origin attacks.
-        secure: Enforces HTTPS-only transmission.
+4. **Rate Limiting**:
+   - Login: Max 5 attempts per 15 minutes.
+   - Registration: Max 10 attempts per 15 minutes.
 
-📝 Features in Progress
+5. **Secure Cookies**:
+   - `httpOnly`: Prevents client-side access.
+   - `sameSite`: Protects against cross-origin attacks.
+   - `secure`: Enforces HTTPS-only transmission.
 
-    Password reset functionality with email confirmation.
-    User roles (e.g., admin, user) and access control.
-    Deployment-ready scripts for production environments.
+---
 
-🛠️ How to Contribute
+## 🖍 Features in Progress
 
-    Fork the project.
-    Create your feature branch:
+- Password reset functionality with email confirmation.
+- User roles (e.g., admin, user) and access control.
+- Deployment-ready scripts for production environments.
 
-git checkout -b feature-name
+---
 
-Commit your changes:
+## 🔧️ How to Contribute
 
-git commit -m "Add a new feature"
+1. Fork the project.
+2. Create your feature branch:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add a new feature"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature-name
+   ```
+5. Open a pull request.
 
-Push to the branch:
+---
 
-    git push origin feature-name
+## 📧 Feedback
 
-    Open a pull request.
-
-📧 Feedback
-
-I’d love to hear your thoughts and feedback! Feel free to open an issue or drop me a message on LinkedIn. Let’s build a secure and scalable web together! 🚀
+I’d love to hear your thoughts and feedback! Feel free to open an issue or drop me a message on LinkedIn. Let’s build a secure and scalable web together! 🚀✨
