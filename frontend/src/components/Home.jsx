@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "../utils/axiosConfig";
 import { useNavigate } from "react-router-dom";
+import Logout from "./Logout";
 
 const Home = () => {
     const [message, setMessage] = useState("");
@@ -23,6 +24,7 @@ const Home = () => {
     return (
         <div style={{ textAlign: "center", marginTop: "50px" }}>
             <h1>Home</h1>
+            <Logout />
             <p>{message}</p>
         </div>
     );
